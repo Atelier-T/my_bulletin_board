@@ -1,4 +1,4 @@
-package controllers.b_users;
+package controllers.users;
 
 import java.io.IOException;
 import java.util.List;
