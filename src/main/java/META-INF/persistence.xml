@@ -8,9 +8,9 @@
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
 			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/my_bulletin_board?useSSL=false&amp;useUnicode=true&amp;characterEncoding=utf8"/>
 			<property name="javax.persistence.jdbc.user" value="buser"/>
-			<property name="javax.persistence.jdbc.password" value="bPass88"/>
+			<property name="javax.persistence.jdbc.password" value="Fv2Lbgm("/>
 			<property name="javax.persistence.schema-generation.database.action" value="create"/>
-			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect"/>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
 			<property name="hibernate.show_sql" value="true"/>
 			<property name="hibernate.format_sql" value="true"/>
 		</properties>

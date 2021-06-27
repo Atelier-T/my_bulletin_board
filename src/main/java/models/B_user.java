@@ -18,7 +18,17 @@ import javax.persistence.Table;
     // ユニット名が既にあるか確認
     @NamedQuery(
         name = "checkRegisteredName",
-        query = "SELECT u FROM B_user AS u ORDER BY u.u_name DESC"
+        query = "SELECT COUNT(u) FROM B_user AS u WHERE u.u_name = :u_name"
+    ),
+    // 全てのユーザ情報を取得
+    @NamedQuery(
+        name = "getAllUsers",
+        query = "SELECT u FROM B_user AS u ORDER BY u.u_id ASC"
+    ),
+    // ユーザ情報の数を取得
+    @NamedQuery(
+        name = "getUsersCount",
+        query = "SELECT COUNT(u) FROM B_user AS u"
     ),
 })
 
