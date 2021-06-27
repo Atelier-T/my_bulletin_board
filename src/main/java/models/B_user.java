@@ -20,7 +20,7 @@ public class B_user {
     private Integer u_id;
 
     // ユーザ名
-    @Column(name = "u_name", length = 255, nullable = false)
+    @Column(name = "u_name", length = 255, nullable = false, unique = true)
     private String u_name;
 
     // パスワード
