@@ -15,6 +15,7 @@ import javax.persistence.Table;
 @Table(name = "b_users")
 
 @NamedQueries({
+    // ユニット名が既にあるか確認
     @NamedQuery(
         name = "checkRegisteredName",
         query = "SELECT u FROM B_user AS u ORDER BY u.u_name DESC"
