@@ -10,17 +10,17 @@ import utils.DBUtil;
 
 public class B_userValidator {
     // ユーザ名とパスワードに不備があればerrorsリストにメッセージが入り、返される
-    public static List<String> validate(B_user b_user, Boolean nameDuplicateCheckFlag, Boolean passwordCheckFlag) {
+    public static List<String> validate(B_user user, Boolean nameDuplicateCheckFlag, Boolean passwordCheckFlag) {
         List<String> errors = new ArrayList<String>();
 
         // ユーザ名に不備があるか確認し、あればerrorsリストへ
-        String name_error = validateName(b_user.getU_name(), nameDuplicateCheckFlag);
+        String name_error = validateName(user.getU_name(), nameDuplicateCheckFlag);
         if(!name_error.equals("")) {
             errors.add(name_error);
         }
 
         // パスワードに不備があるか確認し、あればerrorsリストへ
-        String password_error = validatePassword(b_user.getPassword(), passwordCheckFlag);
+        String password_error = validatePassword(user.getPassword(), passwordCheckFlag);
         if(!password_error.equals("")) {
             errors.add(password_error);
         }
