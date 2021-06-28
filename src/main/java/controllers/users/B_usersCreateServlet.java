@@ -56,6 +56,11 @@ public class B_usersCreateServlet extends HttpServlet {
             u.setCreated_at(currentTime);
             u.setUpdated_at(currentTime);
 
+            // 詳細情報があれば詳細情報もセット
+            try {
+                u.setU_info(request.getParameter("u_info"));
+            } catch (Exception e) { }
+
             List<String> errors = B_userValidator.validate(u, true, true);
             if(errors.size() > 0) {
                 em.close();

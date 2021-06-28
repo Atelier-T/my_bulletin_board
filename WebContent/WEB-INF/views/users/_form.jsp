@@ -28,5 +28,9 @@
         </select>
         <br /><br />
 
+        <label for="u_info">詳細情報</label><br />
+        <textarea name="u_info" rows="16" cols="48">${user.u_info}</textarea>
+        <br /><br />
+
         <input type="hidden" name="_token" value="${_token}" />
         <button type="submit">投稿</button>
