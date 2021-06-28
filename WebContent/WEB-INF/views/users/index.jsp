@@ -28,13 +28,13 @@
                         <td><c:out value="${user.u_name}" /></td>
                         <td>
                             <c:choose>
-                                <c:when test="${user.user_flag=0}">
+                                <c:when test="${user.user_flag==0}">
                                     管理者
                                 </c:when>
-                                <c:when test="${user.user_flag=1}">
+                                <c:when test="${user.user_flag==1}">
                                     ユーザ
                                 </c:when>
-                                <c:when test="${user.user_flag=2}">
+                                <c:when test="${user.user_flag==2}">
                                     凍結中
                                 </c:when>
                             </c:choose>

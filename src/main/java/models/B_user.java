@@ -23,7 +23,7 @@ import javax.persistence.Table;
     // 全てのユーザ情報を取得
     @NamedQuery(
         name = "getAllUsers",
-        query = "SELECT u FROM B_user AS u ORDER BY u.u_id ASC"
+        query = "SELECT u FROM B_user AS u"
     ),
     // ユーザ情報の数を取得
     @NamedQuery(

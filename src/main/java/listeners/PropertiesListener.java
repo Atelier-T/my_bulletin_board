@@ -35,6 +35,8 @@ public class PropertiesListener implements ServletContextListener {
      * @see ServletContextListener#contextInitialized(ServletContextEvent)
      */
     public void contextInitialized(ServletContextEvent arg0)  {
+        // アプリケーション起動時にハッシュ化用の文字列を渡す
+        // "/META-INF/application.properties"の内容は.gitignoreで見えないようにしておく
         ServletContext context = arg0.getServletContext();
 
         String path = context.getRealPath("/META-INF/application.properties");
