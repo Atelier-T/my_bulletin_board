@@ -40,7 +40,7 @@
                             </c:choose>
                         </td>
                         <td>
-                            <a href="<c:url value='/users/show?id=${user.u_id}' />">編集</a>
+                            <a href="<c:url value='/users/show?id=${user.u_id}' />">表示</a>
                         </td>
                     </tr>
                 </c:forEach>
