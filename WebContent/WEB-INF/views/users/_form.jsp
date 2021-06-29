@@ -24,7 +24,7 @@
         <select name="user_flag">
             <option value="0"<c:if test="${user.user_flag == 0}"> selected</c:if>>管理者</option>
             <option value="1"<c:if test="${user.user_flag == 1}"> selected</c:if>>ユーザ</option>
-            <option value="1"<c:if test="${user.user_flag == 2}"> selected</c:if>>凍結中</option>
+            <option value="2"<c:if test="${user.user_flag == 2}"> selected</c:if>>凍結中</option>
         </select>
         <br /><br />
 

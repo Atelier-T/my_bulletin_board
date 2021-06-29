@@ -8,7 +8,7 @@
         <!-- フラッシュメッセージ -->
         <c:choose>
             <c:when test="${user != null}">
-                <h2>id : ${user.u_id} の従業員情報　詳細ページ</h2>
+                <h2>${user.u_name} のユーザ情報　詳細ページ</h2>
 
                 <table>
                     <tbody>
