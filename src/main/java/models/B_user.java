@@ -15,7 +15,7 @@ import javax.persistence.Table;
 @Table(name = "b_users")
 
 @NamedQueries({
-    // ユニット名が既にあるか確認
+    // ユーザ名が既にあるか確認
     @NamedQuery(
         name = "checkRegisteredName",
         query = "SELECT COUNT(u) FROM B_user AS u WHERE u.u_name = :u_name"
@@ -29,6 +29,11 @@ import javax.persistence.Table;
     @NamedQuery(
         name = "getUsersCount",
         query = "SELECT COUNT(u) FROM B_user AS u"
+    ),
+    // ログインの際にユーザ名とパスワードが正しいかチェックする為に情報を取得
+    @NamedQuery(
+            name = "checkLoginNameAndPassword",
+            query = "SELECT u FROM B_user AS u WHERE u.u_name = :u_name AND u.password = :password"
     ),
 })
 
