@@ -9,10 +9,25 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "b_comments")
+
+@NamedQueries({
+    // 全てのコメント情報を取得
+    @NamedQuery(
+        name = "getAllComments",
+        query = "SELECT c FROM B_comment AS c"
+    ),
+    // コメント情報の数を取得
+    @NamedQuery(
+        name = "getCommentsCount",
+        query = "SELECT COUNT(c) FROM B_comment AS c"
+    ),
+})
 
 public class B_comment {
     // コメントID
