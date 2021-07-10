@@ -7,7 +7,7 @@
                 <label for="u_name">名前:${login_user.u_name}</label><br /><br />
 
                 <label for="content">コメント</label><br />
-                <textarea name="comment" rows="4" cols="48"></textarea>
+                <textarea name="content" rows="4" cols="48"></textarea>
                 <br /><br />
 
                 <input type="hidden" name="_token" value="${_token}" />

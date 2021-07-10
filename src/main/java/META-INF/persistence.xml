@@ -4,6 +4,7 @@
 		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 		<class>models.B_user</class>
 		<class>models.B_comment</class>
+		<class>models.B_res</class>
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
 			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/my_bulletin_board?useSSL=false&amp;useUnicode=true&amp;characterEncoding=utf8"/>

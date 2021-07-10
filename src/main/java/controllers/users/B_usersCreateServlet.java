@@ -82,5 +82,4 @@ public class B_usersCreateServlet extends HttpServlet {
             }
         }
     }
-
 }

@@ -2,6 +2,14 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:import url="../layout/app.jsp">
     <c:param name="content">
+
+        <!-- フラッシュメッセージ -->
+        <c:if test="${flush != null}">
+            <div id="flush_success">
+                <c:out value="${flush}"></c:out>
+            </div>
+        </c:if>
+
         <c:choose>
             <c:when test="${login_user!=null}">
                 <h2>Atelier-T専用掲示板へようこそ、${login_user.u_name}さん</h2>
@@ -26,7 +34,7 @@
             <c:forEach var="comment" items="${comments}" varStatus="status">
                 <div id="commentsRow${status.count % 2}">
                     <p>
-                        ${status.count} 名前:${comment.u_id.u_name} 日時:${comment.created_at}<br>
+                        ${status.count} 名前:${comment.b_users.u_name} 日時:${comment.created_at}<br>
                         ${comment.content}
                     </p>
                 </div>

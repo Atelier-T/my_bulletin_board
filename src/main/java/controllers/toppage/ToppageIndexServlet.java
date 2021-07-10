@@ -42,6 +42,7 @@ public class ToppageIndexServlet extends HttpServlet {
 
         em.close();
 
+
         // 取得した情報をJSPに渡す
         request.setAttribute("comments", comments);
 
@@ -49,6 +50,11 @@ public class ToppageIndexServlet extends HttpServlet {
         if(request.getSession().getAttribute("flush") != null) {
             request.setAttribute("flush", request.getSession().getAttribute("flush"));
             request.getSession().removeAttribute("flush");
+        }
+
+        // ログイン状態ならコメントを書き込めるようにトークンを設定
+        if(request.getSession().getAttribute("login_user") != null) {
+            request.setAttribute("_token", request.getSession().getId());
         }
 
         RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/topPage/index.jsp");
