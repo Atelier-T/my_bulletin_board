@@ -18,6 +18,7 @@ import models.B_comment;
 import models.B_res;
 import models.B_user;
 import utils.DBUtil;
+import utils.NewLineUtil;
 
 /**
  * Servlet implementation class ToppageCreateServlet
@@ -48,7 +49,8 @@ public class ToppageCreateServlet extends HttpServlet {
 
             // 各データをコメント情報として格納
             c.setB_users(u);
-            c.setContent(request.getParameter("content"));
+            // 改行コードを<br />に変換して保存
+            c.setContent(NewLineUtil.NL_change(request.getParameter("content")));
 
             c.setDelete_flag(0);
 
